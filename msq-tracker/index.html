@@ -15,11 +15,11 @@
   <meta name="twitter:card" content="summary" />
   <link rel="canonical" href="https://huis-snow.github.io/ffxiv/msq-tracker/" />
   <link rel="icon" href="../favicon.svg?v=20260906-night" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260906-night" />
+  <link rel="stylesheet" href="styles.css?v=20260906-spoiler" />
   <link rel="stylesheet" href="../theme.css?v=20260906-night" />
   <script src="data.js?v=20260906" defer></script>
   <script src="progress.js?v=20260906" defer></script>
-  <script src="app.js?v=20260906" defer></script>
+  <script src="app.js?v=20260906-spoiler" defer></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#questSearch">퀘스트 검색으로 바로가기</a>
@@ -40,12 +40,13 @@
         <label for="questSearch">퀘스트 이름</label>
         <div class="search-box"><span aria-hidden="true">⌕</span><input id="questSearch" type="search" autocomplete="off" placeholder="퀘스트 이름의 일부를 입력하세요" aria-describedby="searchHelp" disabled /></div>
         <p id="searchHelp" class="help">띄어쓰기 없이, 초성으로도 찾을 수 있어요.</p>
+        <div class="spoiler-option"><label><input id="hideQuestNames" type="checkbox" checked aria-describedby="spoilerHelp" /><span>퀘스트 이름 초성으로 표시</span></label><p id="spoilerHelp" class="help">검색 결과와 선택한 퀘스트에 적용돼요.</p></div>
         <label for="expansionFilter">확장팩으로 좁히기</label>
         <select id="expansionFilter" disabled><option value="">모든 확장팩</option></select>
         <div class="results-heading"><span id="searchSummary" role="status">공식 가이드 데이터를 불러오는 중…</span></div>
         <div id="searchResults" class="search-results" aria-label="퀘스트 검색 결과"></div>
         <button id="showMore" class="text-button" type="button" hidden>검색 결과 더 보기 ↓</button>
-        <p class="spoiler-note">검색 결과에는 퀘스트 이름이 표시돼요.<br />줄거리와 이후 퀘스트는 자동으로 펼치지 않아요.</p>
+        <p class="spoiler-note">초성 표시를 끄면 퀘스트 이름이 그대로 보여요.<br />공식 가이드 링크에서는 이름과 상세 내용이 표시돼요.</p>
       </section>
       <section class="progress-panel" aria-labelledby="progressTitle">
         <div class="panel-heading"><span class="step">02</span><h2 id="progressTitle">내 이야기 진행률</h2><span class="count-badge">퀘스트 개수 기준</span></div>

@@ -109,6 +109,10 @@ margin-top:22px;
 padding:15px 0 10px;
 font-size:13px;
 color:var(--muted)}
+.spoiler-option{margin-top:16px}
+.spoiler-option label{display:flex;align-items:center;gap:9px;min-height:44px;font-size:14px;cursor:pointer}
+.spoiler-option input{width:18px;height:18px;margin:0;flex-shrink:0;accent-color:var(--green);cursor:pointer}
+.spoiler-option .help{margin-top:0}
 .search-results{max-height:360px;
 overflow-y:auto;
 overscroll-behavior:contain;

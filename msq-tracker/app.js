@@ -14,13 +14,19 @@
   function node(tag, className, text) {
     const el=document.createElement(tag);if(className)el.className=className;if(text!==undefined)el.textContent=text;return el;
   }
+  function questTitle(q) {
+    return `Lv.${q.level} · ${$('hideQuestNames').checked?window.MSQProgress.initials(q.name):q.name}`;
+  }
+  function questCategory(q) {
+    return $('hideQuestNames').checked?data.expansions.find(e=>e.id===q.expansion).name:data.groups.find(g=>g.id===q.group).name;
+  }
   function renderSearch() {
     if(composing)return;
     const query=$('questSearch').value,filter=$('expansionFilter').value;
     const results=$('searchResults');results.replaceChildren();
     if(!query.trim()&&!filter){
       $('searchSummary').textContent='퀘스트 이름을 검색하거나 확장팩을 골라주세요';
-      results.append(node('p','search-empty','예: 새벽의 혈맹, 이슈가르드를 향해서\n퀘스트 이름의 일부만 입력해도 괜찮아요.'));
+      results.append(node('p','search-empty','게임에 표시된 퀘스트 이름의 일부나 초성을 입력해 주세요.'));
       $('showMore').hidden=true;return;
     }
     const matches=tracker.search(query,filter);
@@ -28,10 +34,9 @@
     if(!matches.length)results.append(node('p','search-empty','일치하는 주요 퀘스트가 없어요. 이름의 일부로 다시 검색하거나 확장팩 필터를 확인해 주세요.'));
     for(const q of matches.slice(0,limit)) {
       const button=node('button','quest-result');button.type='button';button.dataset.quest=q.id;button.setAttribute('aria-pressed',String(q.id===selected));
-      const text=node('span');text.append(node('strong','',q.name));
-      const group=data.groups.find(g=>g.id===q.group);
+      const text=node('span');text.append(node('strong','',questTitle(q)));
       const route=q.cities.length<3?` · ${q.cities.map(c=>cityNames[c]).join('/')}`:'';
-      text.append(node('small','',`${group.name} · Lv.${q.level}${route}`));
+      text.append(node('small','',`${questCategory(q)}${route}`));
       const arrow=node('span','arrow','↗');arrow.setAttribute('aria-hidden','true');button.append(text,arrow);results.append(button);
     }
     $('showMore').hidden=matches.length<=limit;
@@ -65,10 +70,10 @@
     if(!selected)return;
     const status=document.querySelector('input[name="questStatus"]:checked').value;
     const result=tracker.calculate(selected,status,$('startCity').value);
-    const q=result.selected, group=data.groups.find(g=>g.id===q.group);
+    const q=result.selected;
     $('emptyState').hidden=true;$('selectedState').hidden=false;
-    $('selectedMeta').textContent=`${group.name} · Lv.${q.level} · ${q.region}`;
-    $('selectedName').textContent=q.name;
+    $('selectedMeta').textContent=questCategory(q)+($('hideQuestNames').checked?'':` · ${q.region}`);
+    $('selectedName').textContent=questTitle(q);
     $('questLink').href=`https://guide.ff14.co.kr/lodestone/db/quest/${q.id}`;
     $('completionNote').textContent=status==='completed'?'선택한 퀘스트까지 완료 개수에 포함해요.':'선택한 퀘스트는 아직 완료 개수에 포함하지 않아요.';
     $('expansionName').textContent=data.expansions.find(e=>e.id===q.expansion).name;
@@ -103,6 +108,7 @@
       if(event.key==='Enter'){const first=$('searchResults').querySelector('button');if(first){event.preventDefault();selectQuest(first.dataset.quest);}}
     });
     $('expansionFilter').addEventListener('change',()=>{limit=30;renderSearch();});
+    $('hideQuestNames').addEventListener('change',()=>{renderSearch();renderProgress();});
     $('showMore').addEventListener('click',()=>{limit+=30;renderSearch();});
     $('searchResults').addEventListener('click',event=>{const button=event.target.closest('button[data-quest]');if(button)selectQuest(button.dataset.quest);});
     $('searchResults').addEventListener('keydown',event=>{
