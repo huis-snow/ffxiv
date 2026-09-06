@@ -2,11 +2,26 @@
 
 파이널판타지14 한국 서버를 위한 정적 웹 도구 모음입니다.
 
+**모든 도구를 무료로 제공합니다. 광고·후원·유료 기능 없이 비영리로 운영합니다.** SQUARE ENIX 및 액토즈소프트가 제작하거나 승인한 공식 서비스가 아닌 팬 제작 사이트입니다.
+
 - 첫 화면: <https://huis-snow.github.io/ffxiv/>
 - [메인퀘 어디쯤?](https://huis-snow.github.io/ffxiv/msq-tracker/) — 주요 퀘스트 이름·초성 검색과 전체·확장팩별 진행률
 - [앱 설명과 데이터 갱신 안내](./msq-tracker/README.md)
 - [시리즈 작전표](https://huis-snow.github.io/ffxiv/pvp-series-calculator/) — PvP 시리즈 목표 경험치·예상 판수·하루 목표 계산 ([앱 안내](./pvp-series-calculator/README.md))
 - [임무 초성 사전](https://huis-snow.github.io/ffxiv/duty-finder/) — 던전·토벌전·레이드 등 공식 임무의 한글·초성 검색 ([앱 안내](./duty-finder/README.md))
+
+## 출처 및 권리 안내
+
+- 퀘스트 이름·레벨·분류·선행 관계: [파이널판타지14 한국 공식 가이드 — 주요 퀘스트](https://guide.ff14.co.kr/lodestone/db/quest)
+- 임무 이름·레벨·분류: [파이널판타지14 한국 공식 가이드 — 임무](https://guide.ff14.co.kr/lodestone/db/duty)
+- PvP 경험치·보상 수치: [FFXIV Console Games Wiki — Series Malmstones](https://ffxiv.consolegameswiki.com/wiki/Series_Malmstones)
+- 글꼴: [네이버 나눔스퀘어라운드](https://hangeul.naver.com/font/nanum), [SIL Open Font License 1.1](./fonts/nanum-square-round/OFL.txt)
+
+기재되어있는 회사 명 · 제품명 · 시스템 이름은 해당 소유자의 상표 또는 등록 상표입니다.
+
+© SQUARE ENIX Published in Korea by Actoz Soft CO., LTD.
+
+[파이널판타지14 저작물 이용 허락 조건 — 한국 운영정책 10조](https://www.ff14.co.kr/support/policy)를 따릅니다. 공식 가이드에서 가져온 게임 정보와 제3자 글꼴의 권리는 각 권리자에게 있으며, 이 저장소의 공개가 해당 자료에 대한 별도의 자유 이용 허락을 의미하지 않습니다. 권리자의 요청이 있으면 관련 자료의 게재를 중단합니다.
 
 ## 배포
 
