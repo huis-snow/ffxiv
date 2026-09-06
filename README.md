@@ -14,6 +14,8 @@ GitHub Pages의 원본은 `main` 브랜치의 `/ (root)`입니다. 빌드나 패
 ```text
 /
 ├── index.html
+├── theme.css
+├── hub.css
 ├── favicon.svg
 ├── sitemap.xml
 ├── msq-tracker/
@@ -23,3 +25,5 @@ GitHub Pages의 원본은 `main` 브랜치의 `/ (root)`입니다. 빌드나 패
 검증: `node --test msq-tracker/tests/progress.test.cjs`
 
 시리즈 작전표 검증: `node --test pvp-series-calculator/tests/pvp-series-calculator.test.js`
+
+공통 색상·상단 메뉴·하단 영역은 `theme.css`, 도구 목록은 `hub.css`, 각 앱의 작업 화면은 해당 폴더의 `styles.css`에서 관리합니다.
