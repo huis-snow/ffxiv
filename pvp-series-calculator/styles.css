@@ -526,13 +526,32 @@ footer {
 }
 
 .deadline-block .field {
-  max-width: 230px;
+  min-width: 0;
+}
+
+.deadline-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  min-height: 32px;
+  margin-bottom: 8px;
+}
+
+.deadline-heading > label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.deadline-heading small {
+  color: var(--muted);
+  font-weight: 500;
 }
 
 .clear-date-button {
-  position: absolute;
-  top: 30px;
-  right: 0;
+  position: static;
+  flex: 0 0 auto;
 }
 
 .deadline-block > p {
