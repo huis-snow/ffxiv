@@ -25,7 +25,7 @@ cursor:wait}
 [hidden]{display:none!important}
 :focus-visible{outline:3px solid var(--accent);
 outline-offset:4px}
-input[type=search]:focus-visible{outline-offset:0}
+input[type=search]:focus{outline:none}
 h1,h2,h3,p{margin:0}
 button{touch-action:manipulation}
 .site-header{max-width:1240px;
@@ -435,7 +435,7 @@ h1 em { color: var(--ff-cyan); }
 .panel-heading { padding-bottom: 18px; border-bottom: 1px solid var(--line); }
 .step { padding: 2px 0; border: 0; border-radius: 0; color: var(--ff-gold); font-size: 14px; margin-right: 4px; }
 .search-box, select { border-radius: 4px; }
-.search-box:focus-within { border-color: var(--ff-cyan); }
+.search-box:focus-within { border-bottom-color: var(--ff-cyan); box-shadow: inset 0 -2px var(--ff-cyan); }
 input::placeholder { color: #95a5ba; }
 .quest-result { padding: 14px 11px; border-radius: 2px; }
 .quest-result[aria-pressed=true] { box-shadow: inset 2px 0 var(--ff-cyan); }
