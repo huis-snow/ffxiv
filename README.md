@@ -18,6 +18,4 @@ GitHub Pages의 원본은 `main` 브랜치의 `/ (root)`입니다. 빌드나 패
 └── msq-tracker/
 ```
 
-기존 `huis-snow/tools` 저장소의 `msq-tracker/`에서 이전했습니다. 옛 주소 <https://huis-snow.github.io/tools/msq-tracker/>는 새 앱으로 이동합니다.
-
 검증: `node --test msq-tracker/tests/progress.test.cjs`

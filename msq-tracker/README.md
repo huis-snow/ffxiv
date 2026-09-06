@@ -5,7 +5,6 @@
 - 서비스: <https://huis-snow.github.io/ffxiv/msq-tracker/>
 - 저장소: <https://github.com/huis-snow/ffxiv>
 - GitHub Pages: `main` 브랜치의 `/ (root)`에서 배포합니다. 앱은 `msq-tracker/`에 있습니다.
-- 기존 <https://huis-snow.github.io/tools/msq-tracker/> 주소는 새 서비스로 이동하는 안내 페이지입니다.
 
 - 원본: <https://guide.ff14.co.kr/lodestone/db/quest>
 - 포함: `주요 퀘스트 1`, `주요 퀘스트 2`의 15개 하위 분류. 후속 패치도 해당 확장팩에 포함합니다.
