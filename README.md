@@ -27,3 +27,5 @@ GitHub Pages의 원본은 `main` 브랜치의 `/ (root)`입니다. 빌드나 패
 시리즈 작전표 검증: `node --test pvp-series-calculator/tests/pvp-series-calculator.test.js`
 
 공통 색상·상단 메뉴·하단 영역은 `theme.css`, 도구 목록은 `hub.css`, 각 앱의 작업 화면은 해당 폴더의 `styles.css`에서 관리합니다.
+
+기본 글꼴은 네이버 **나눔스퀘어라운드**입니다. [네이버 공식 배포 페이지](https://hangeul.naver.com/font/nanum)의 Regular·Bold·ExtraBold 웹폰트를 `fonts/nanum-square-round/`에 포함해 직접 제공합니다. 원본 파일은 변경하지 않았으며, [저작권 안내와 SIL Open Font License 1.1](./fonts/nanum-square-round/OFL.txt)을 함께 배포합니다. [네이버 라이선스 안내](https://help.naver.com/support/contents/contents.help?serviceNo=1074&categoryNo=3497).

@@ -1,4 +1,25 @@
 /* Shared identity for the FFXIV tools. App styles own their working layouts. */
+@font-face {
+  font-family: "NanumSquareRound";
+  src: url("./fonts/nanum-square-round/NanumSquareRoundR.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NanumSquareRound";
+  src: url("./fonts/nanum-square-round/NanumSquareRoundB.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NanumSquareRound";
+  src: url("./fonts/nanum-square-round/NanumSquareRoundEB.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
 :root {
   color-scheme: dark;
   --ff-bg: #0b1220;
@@ -9,7 +30,7 @@
   --ff-muted: #a7b7cd;
   --ff-cyan: #85d8ef;
   --ff-gold: #e7c78d;
-  --ff-sans: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --ff-sans: "NanumSquareRound", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   --ff-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 * { box-sizing: border-box; }
