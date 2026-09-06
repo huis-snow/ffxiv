@@ -50,6 +50,8 @@ GitHub Pages의 원본은 `main` 브랜치의 `/ (root)`입니다. 빌드나 패
 
 공통 색상·상단 메뉴·하단 영역은 `theme.css`, 도구 목록은 `hub.css`, 각 앱의 작업 화면은 해당 폴더의 `styles.css`에서 관리합니다.
 
-뉴비 FAQ는 JavaScript 없이 작동하는 정적 HTML입니다. 질문은 `beginner-faq/index.html`에서 관리하며, 내용을 바꿀 때 답변별 공식 출처와 확인일도 점검합니다. 퀘스트 이름은 중첩된 접기 영역에 넣어 기본적으로 숨깁니다.
+뉴비 FAQ는 정적 HTML에 질문·답변·주제 검색을 추가한 페이지입니다. 한글·초성·혼합 입력과 공백을 무시한 검색을 지원하며, 한글 조합 중에도 결과를 갱신합니다. 접어 둔 퀘스트 이름과 출처 영역은 검색 대상에서 제외합니다. JavaScript가 없어도 전체 질문을 펼쳐 읽을 수 있습니다. 질문은 `beginner-faq/index.html`에서 관리하며, 내용을 바꿀 때 답변별 공식 출처와 확인일도 점검합니다. 퀘스트 이름은 중첩된 접기 영역에 넣어 기본적으로 숨깁니다.
+
+뉴비 FAQ 검색 검증: `node --test beginner-faq/tests/search.test.cjs`
 
 모든 페이지의 본문·숫자·영문·라벨은 네이버 **나눔스퀘어라운드**를 공통으로 사용합니다. [네이버 공식 배포 페이지](https://hangeul.naver.com/font/nanum)의 Regular·Bold·ExtraBold 웹폰트를 `fonts/nanum-square-round/`에 포함해 직접 제공합니다. 원본 파일은 변경하지 않았으며, [저작권 안내와 SIL Open Font License 1.1](./fonts/nanum-square-round/OFL.txt)을 함께 배포합니다. [네이버 라이선스 안내](https://help.naver.com/support/contents/contents.help?serviceNo=1074&categoryNo=3497).

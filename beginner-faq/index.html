@@ -15,7 +15,9 @@
   <link rel="canonical" href="https://huis-snow.github.io/ffxiv/beginner-faq/" />
   <link rel="icon" href="../favicon.svg?v=20260906-night" type="image/svg+xml" />
   <link rel="stylesheet" href="../theme.css?v=20260906-faq" />
-  <link rel="stylesheet" href="./styles.css?v=20260906-faq" />
+  <link rel="stylesheet" href="./styles.css?v=20260906-faq-search" />
+  <script src="./search.js?v=20260906-faq-search" defer></script>
+  <script src="./app.js?v=20260906-faq-search" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#faqContent">질문 목록으로 바로가기</a>
@@ -28,9 +30,16 @@
   <main class="faq-main" id="faqContent">
     <div class="faq-masthead"><p class="eyebrow">FIRST STEPS / BEGINNER FAQ</p><h1>처음 모험하며<br>궁금한 것들</h1><p>퀘스트부터 첫 비행까지. 질문을 펼쳐 짧은 답과 지금 할 일을 확인하세요.</p></div>
     <div class="reading-note"><p>한국 공식 가이드를 바탕으로 직접 요약했어요. <strong>모든 답변에 관련 공식 문서를 연결</strong>하고, 개인적인 조언은 ‘플레이 팁’으로 표시했어요.</p><p>퀘스트 이름은 한 번 더 펼쳐야 보여요. 외부 공식 문서에는 이후 이야기·지역 정보가 포함될 수 있어요.</p><span>공식 문서 확인: <time datetime="2026-09-06">2026.09.06</time> · 한국 서버 기준 · 15개 질문</span></div>
+    <form class="faq-search" id="faqSearchForm" role="search" hidden>
+      <label for="faqSearch">궁금한 내용 검색</label>
+      <div class="search-row"><div class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m15.5 15.5 5 5" /></svg><input id="faqSearch" type="search" placeholder="예: 초코보, ㅊㅋㅂ, 장비 수리" autocomplete="off" aria-describedby="searchHelp" aria-controls="faqResults" /></div><button id="clearSearch" type="button" disabled>검색 지우기</button></div>
+      <p id="searchHelp">질문·답변·주제를 검색해요. 띄어쓰기 없이, 초성으로도 찾을 수 있어요. 접어 둔 퀘스트 이름은 검색에서 제외해요.</p>
+      <p id="searchStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+    </form>
     <div class="faq-layout">
       <nav class="topic-nav" aria-label="FAQ 주제"><p>궁금한 주제</p><a href="#quests"><span>01 퀘스트 진행</span><span>4</span></a><a href="#dungeons"><span>02 첫 던전</span><span>4</span></a><a href="#equipment"><span>03 장비</span><span>4</span></a><a href="#travel"><span>04 이동</span><span>3</span></a><a class="all-guides" href="https://guide.ff14.co.kr/lodestone/playguide/main" target="_blank" rel="noopener noreferrer">공식 초보자 가이드 ↗</a></nav>
-      <div class="faq-sections">
+      <div class="faq-sections" id="faqResults">
+      <div class="empty-results" id="emptyResults" hidden><strong>일치하는 질문이 없어요.</strong><p>더 짧은 단어나 다른 표현으로 검색해 보세요. 검색을 지우면 전체 질문을 볼 수 있어요.</p></div>
       <section class="faq-section" id="quests" aria-labelledby="quests-title">
         <div class="section-heading"><span class="section-number">01</span><div><h2 id="quests-title">퀘스트 진행</h2><p>무엇부터 하면 될지 막막할 때</p></div></div>
         <details class="faq-item" id="main-first">

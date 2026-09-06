@@ -5,6 +5,21 @@
 .reading-note { margin: 28px 0 38px; padding: 18px 22px; border-left: 2px solid #c4b7ec; background: #1d2337; font-size: 14px; }
 .reading-note p { margin: 0 0 8px; }
 .reading-note span { color: var(--ff-muted); font-size: 12px; }
+.faq-search { margin: 0 0 32px; }
+.faq-search > label { display: block; font-weight: 700; margin-bottom: 10px; }
+.search-row { display: flex; align-items: stretch; gap: 12px; }
+.search-field { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; padding: 0 16px; background: #0d1929; border: 1px solid var(--ff-line); border-bottom: 2px solid #4c657d; border-radius: 4px 4px 0 0; }
+.search-field:focus-within { border-bottom-color: var(--ff-cyan); }
+.search-field svg { width: 22px; height: 22px; flex: 0 0 22px; stroke: var(--ff-cyan); stroke-width: 1.8; fill: none; }
+.search-field input { min-width: 0; width: 100%; padding: 15px 0; border: 0; border-radius: 0; background: transparent; color: var(--ff-text); outline: none; }
+.search-field input::placeholder { color: var(--ff-muted); opacity: 1; }
+.search-row button { padding: 10px 16px; flex-shrink: 0; border: 1px solid var(--ff-line); border-radius: 4px; background: var(--ff-panel); color: var(--ff-cyan); cursor: pointer; }
+.search-row button:disabled { color: var(--ff-muted); cursor: default; }
+.search-row button:hover:not(:disabled) { border-color: var(--ff-cyan); }
+#searchHelp { margin: 10px 0 8px; color: var(--ff-muted); font-size: 13px; }
+#searchStatus { margin: 0; font-size: 14px; color: var(--ff-cyan); }
+.empty-results { border: 1px solid var(--ff-line); background: var(--ff-panel); border-radius: 4px; padding: 28px; }
+.empty-results p { margin: 8px 0 0; color: var(--ff-muted); }
 .faq-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 42px; align-items: start; }
 .topic-nav { position: sticky; top: 104px; display: grid; border-top: 1px solid var(--ff-line); }
 .topic-nav > p { color: var(--ff-muted); font-size: 12px; margin: 18px 0 12px; }
@@ -47,3 +62,4 @@ summary::marker { color: var(--ff-cyan); }
   .answer { padding: 18px 16px; }
   .section-heading h2 { font-size: 22px; }
 }
+@media (max-width: 480px) { .search-row { flex-wrap: wrap; } .search-field { flex-basis: 100%; } .search-row button { margin-left: auto; } }
