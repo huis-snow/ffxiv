@@ -337,8 +337,16 @@ footer {
 
 .current-fields {
   display: grid;
-  grid-template-columns: 0.75fr 1.25fr;
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+  gap: 18px 12px;
+}
+
+.current-fields > .field {
+  min-width: 0;
+}
+
+.current-fields > .field > span {
+  word-break: keep-all;
 }
 
 .field {
@@ -1178,11 +1186,6 @@ footer > a:last-child {
     padding-inline: 18px;
   }
 
-  .current-fields {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
   .target-mode {
     grid-template-columns: 1fr;
   }
@@ -1332,5 +1335,5 @@ footer > a:last-child {
 .data-details-body { font-size: 14px; }
 @media (max-width: 1000px) { .planner-shell { gap: 16px; }.result-panel { padding: 23px; } }
 @media (max-width: 780px) { .intro { padding: 28px 0 24px; }.intro h1 { font-size: clamp(28px, 7vw, 38px); }.section-heading h2 { font-size: 20px; }.planner-shell { display: grid; grid-template-columns: 1fr; box-shadow: none; }.control-panel { position: static; }.result-panel { padding: 24px 20px; }.guide-section .section-heading { margin-top: 10px; } }
-@media (max-width: 520px) { .intro-copy>p:not(.eyebrow) { font-size: 15px; }.planner-shell { box-shadow: none; }.progress-dial { width: 88px; height: 88px; }.progress-dial::before { width: 72px; height: 72px; }.progress-dial strong { font-size: 20px; }.progress-dial span { font-size: 12px; }.current-fields { grid-template-columns: 1fr 1fr; }.target-mode { grid-template-columns: 1fr; }.result-panel { padding: 23px 18px; } }
-@media (max-width: 360px) { .current-fields { grid-template-columns: 1fr; }.result-hero { grid-template-columns: 1fr; }.progress-dial { justify-self: start; } }
+@media (max-width: 520px) { .intro-copy>p:not(.eyebrow) { font-size: 15px; }.planner-shell { box-shadow: none; }.progress-dial { width: 88px; height: 88px; }.progress-dial::before { width: 72px; height: 72px; }.progress-dial strong { font-size: 20px; }.progress-dial span { font-size: 12px; }.target-mode { grid-template-columns: 1fr; }.result-panel { padding: 23px 18px; } }
+@media (max-width: 360px) { .result-hero { grid-template-columns: 1fr; }.progress-dial { justify-self: start; } }
