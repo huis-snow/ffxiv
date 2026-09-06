@@ -21,7 +21,7 @@
     return $('hideQuestNames').checked?data.expansions.find(e=>e.id===q.expansion).name:data.groups.find(g=>g.id===q.group).name;
   }
   function renderSearch() {
-    if(composing)return;
+    // The input value already includes the IME's composing text; keep live search up to date.
     const query=$('questSearch').value,filter=$('expansionFilter').value;
     const results=$('searchResults');results.replaceChildren();
     if(!query.trim()&&!filter){

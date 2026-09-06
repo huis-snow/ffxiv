@@ -137,3 +137,41 @@ test('static assets and app element references resolve without a build step',()=
   }
   for(const filename of ['data.js','progress.js','app.js'])new vm.Script(fs.readFileSync(path.join(root,filename),'utf8'));
 });
+
+test('IME input searches the composing character without interrupting composition',()=>{
+  const element=()=>({
+    value:'',checked:true,children:[],dataset:{},style:{},handlers:{},
+    classList:{toggle(){}},setAttribute(){},
+    append(...children){this.children.push(...children);},
+    replaceChildren(...children){this.children=children;},
+    get firstChild(){return this.children[0];},
+    addEventListener(type,handler){this.handlers[type]=handler;},
+    querySelector(){assert.fail('IME confirmation must not select or focus a result');}
+  });
+  const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
+  const elements=Object.fromEntries([...html.matchAll(/\bid="([^"]+)"/g)].map(([,id])=>[id,element()]));
+  const queries=[];
+  const appTracker={...tracker,search(query,filter){queries.push(query);return tracker.search(query,filter);}};
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../app.js'),'utf8'),{
+    window:{MSQ_DATA:data,MSQProgress:{...require('../progress.js'),createTracker:()=>appTracker}},
+    document:{getElementById:id=>elements[id],createElement:element,querySelectorAll:()=>[]},
+    console:{error(error){throw error;}}
+  });
+  const input=elements.questSearch;
+  input.handlers.compositionstart();
+  for(const value of ['ㅇ','ㅇㅌ','ㅇㅌㅁ','ㅇㅌ','새','새벼','새벽']){
+    input.value=value;
+    input.handlers.input({isComposing:true});
+    assert.equal(queries.at(-1),value);
+    assert.equal(input.value,value);
+    const expected=tracker.search(value).slice(0,30).map(q=>q.id);
+    assert.deepEqual(elements.searchResults.children.filter(child=>child.dataset.quest).map(child=>child.dataset.quest),expected);
+  }
+  for(const key of ['Enter','ArrowDown'])input.handlers.keydown({key,isComposing:true});
+  input.handlers.compositionend();
+  assert.equal(queries.at(-1),'새벽');
+  input.value='';input.handlers.input({isComposing:false});
+  assert.equal(elements.showMore.hidden,true);
+  assert.equal(elements.searchResults.children.length,1);
+  assert.equal(elements.searchResults.children[0].dataset.quest,undefined);
+});
