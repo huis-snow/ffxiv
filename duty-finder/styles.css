@@ -11,7 +11,7 @@ h2{font-size:17px;font-weight:700}
 .search-controls>div{min-width:0}
 label{display:block;font-size:14px;font-weight:700;margin-bottom:8px}
 .search-box{display:flex;align-items:center;background:#0d1728;border:1px solid #405571;border-radius:4px;overflow:hidden}
-.search-box>span{font:30px Georgia,serif;padding-left:14px;flex:none}
+.search-icon{width:22px;height:22px;margin-left:14px;flex:none}
 .search-box:focus-within{border-bottom-color:var(--ff-cyan);box-shadow:inset 0 -2px var(--ff-cyan)}
 input[type=search]{width:100%;min-width:0;background:transparent;border:0;color:var(--ff-text);padding:13px 10px;font-size:18px;line-height:1.5;appearance:none}
 input[type=search]:focus{outline:none}

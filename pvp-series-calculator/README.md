@@ -4,7 +4,7 @@
 
 서비스: <https://huis-snow.github.io/ffxiv/pvp-series-calculator/>
 
-독립 정적 앱이며, 글꼴은 `fonts/`에 포함되어 있습니다. D2Coding의 [SIL Open Font License 1.1](./fonts/OFL.txt)을 함께 배포합니다.
+독립 정적 앱이며, 모든 화면 글꼴은 공통 `theme.css`의 나눔스퀘어라운드를 사용합니다. 글꼴 파일과 [SIL Open Font License 1.1](../fonts/nanum-square-round/OFL.txt)은 공통 `fonts/nanum-square-round/`에 포함되어 있습니다.
 
 브라우저 입력 복원을 위해 기존 저장 키 `small-tools:pvp-series-calculator:v1`을 유지합니다. 같은 `huis-snow.github.io` 출처의 저장값을 이어 읽으며, 다른 도구나 공용 보관함 코드를 호출하지 않습니다.
 

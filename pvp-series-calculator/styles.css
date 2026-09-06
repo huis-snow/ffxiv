@@ -1,13 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap");
-
-@font-face {
-  font-family: "Series D2Coding";
-  src: url("./fonts/D2Coding.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
 :root {
   --paper: var(--ff-bg);
   --paper-deep: #263b56;
@@ -26,7 +16,6 @@
   --yellow: var(--ff-gold);
   --danger: #ffb9ac;
   --sans: var(--ff-sans);
-  --mono: "IBM Plex Mono", "NanumSquareRound", "Series D2Coding", ui-monospace, monospace;
 }
 
 * {
@@ -172,7 +161,7 @@ footer {
   align-items: center;
   gap: 8px;
   color: var(--muted);
-  font: 600 11px var(--mono);
+  font: 600 11px var(--ff-sans);
   letter-spacing: 0.08em;
 }
 
@@ -199,7 +188,7 @@ footer {
 .estimate-heading span,
 .deadline-result-head span {
   color: var(--orange-dark);
-  font: 600 12px var(--mono);
+  font: 600 12px var(--ff-sans);
   letter-spacing: 0.09em;
 }
 
@@ -422,7 +411,7 @@ footer {
 .number-with-unit b {
   padding-right: 12px;
   color: var(--muted);
-  font: 500 12px var(--mono);
+  font: 500 12px var(--ff-sans);
   white-space: nowrap;
 }
 
@@ -508,7 +497,7 @@ footer {
   border: 1px solid #405571;
   background: #142238;
   color: var(--muted);
-  font: 600 11px var(--mono);
+  font: 600 11px var(--ff-sans);
 }
 
 .quick-targets button:not(:disabled):hover,
@@ -587,7 +576,7 @@ footer {
 .result-copy > p:first-child {
   margin: 0 0 6px;
   color: var(--orange-dark);
-  font: 600 11px var(--mono);
+  font: 600 11px var(--ff-sans);
   letter-spacing: 0.1em;
 }
 
@@ -605,13 +594,13 @@ footer {
 }
 
 .remaining-exp strong {
-  font: 600 clamp(40px, 5vw, 63px) var(--mono);
-  letter-spacing: -0.07em;
+  font: 600 clamp(40px, 5vw, 63px) var(--ff-sans);
+  letter-spacing: normal;
 }
 
 .remaining-exp span {
   color: var(--muted);
-  font: 600 12px var(--mono);
+  font: 600 12px var(--ff-sans);
 }
 
 .result-message {
@@ -652,7 +641,7 @@ footer {
 }
 
 .progress-dial strong {
-  font: 600 25px var(--mono);
+  font: 600 25px var(--ff-sans);
 }
 
 .progress-dial span {
@@ -682,7 +671,7 @@ footer {
   gap: 20px;
   margin-top: 7px;
   color: var(--muted);
-  font: 500 10px var(--mono);
+  font: 500 10px var(--ff-sans);
 }
 
 .estimate-heading {
@@ -738,7 +727,7 @@ footer {
 
 .estimate-card-head span {
   color: var(--muted);
-  font: 600 10px var(--mono);
+  font: 600 10px var(--ff-sans);
   letter-spacing: 0.07em;
 }
 
@@ -766,8 +755,8 @@ footer {
 .estimate-primary strong b {
   margin-right: 2px;
   color: var(--orange-dark);
-  font: 600 30px var(--mono);
-  letter-spacing: -0.06em;
+  font: 600 30px var(--ff-sans);
+  letter-spacing: normal;
 }
 
 .estimate-range {
@@ -795,12 +784,12 @@ footer {
 }
 
 .estimate-range b {
-  font: 600 12px var(--mono);
+  font: 600 12px var(--ff-sans);
 }
 
 .estimate-range i {
   color: var(--orange);
-  font: normal 12px var(--mono);
+  font: normal 12px var(--ff-sans);
 }
 
 .estimate-card > p {
@@ -853,7 +842,7 @@ footer {
 
 .deadline-result-head > strong {
   color: var(--lime);
-  font: 600 13px var(--mono);
+  font: 600 13px var(--ff-sans);
 }
 
 .deadline-status {
@@ -889,7 +878,7 @@ footer {
 
 .pace-grid b {
   overflow-wrap: anywhere;
-  font: 600 12px var(--mono);
+  font: 600 12px var(--ff-sans);
 }
 
 .guide-section {
@@ -913,7 +902,7 @@ footer {
 
 .guide-grid article > span {
   color: var(--orange-dark);
-  font: 600 11px var(--mono);
+  font: 600 11px var(--ff-sans);
 }
 
 .guide-grid h3 {
@@ -952,7 +941,7 @@ footer {
 
 .data-details summary span {
   color: var(--orange);
-  font: 18px var(--mono);
+  font: 18px var(--ff-sans);
   transition: transform 0.2s ease;
 }
 
@@ -993,7 +982,7 @@ footer {
 
 .data-list dd {
   margin: 0;
-  font: 500 11px var(--mono);
+  font: 500 11px var(--ff-sans);
   text-align: right;
 }
 

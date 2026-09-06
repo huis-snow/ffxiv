@@ -15,8 +15,8 @@
   <meta name="twitter:card" content="summary" />
   <link rel="canonical" href="https://huis-snow.github.io/ffxiv/msq-tracker/" />
   <link rel="icon" href="../favicon.svg?v=20260906-night" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260906-round-numbers" />
-  <link rel="stylesheet" href="../theme.css?v=20260906-duty" />
+  <link rel="stylesheet" href="styles.css?v=20260906-all-round" />
+  <link rel="stylesheet" href="../theme.css?v=20260906-all-round" />
   <script src="data.js?v=20260906" defer></script>
   <script src="progress.js?v=20260906" defer></script>
   <script src="app.js?v=20260906-selected-name" defer></script>
@@ -38,7 +38,7 @@
       <section class="search-panel" aria-labelledby="searchTitle">
         <div class="panel-heading"><span class="step">01</span><h2 id="searchTitle">현재 퀘스트 찾기</h2></div>
         <label for="questSearch">퀘스트 이름</label>
-        <div class="search-box"><span aria-hidden="true">⌕</span><input id="questSearch" type="search" autocomplete="off" placeholder="퀘스트 이름의 일부를 입력하세요" aria-describedby="searchHelp" disabled /></div>
+        <div class="search-box"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><input id="questSearch" type="search" autocomplete="off" placeholder="퀘스트 이름의 일부를 입력하세요" aria-describedby="searchHelp" disabled /></div>
         <p id="searchHelp" class="help">띄어쓰기 없이, 초성으로도 찾을 수 있어요.</p>
         <div class="spoiler-option"><label><input id="hideQuestNames" type="checkbox" checked aria-describedby="spoilerHelp" /><span>퀘스트 이름 초성으로 표시</span></label><p id="spoilerHelp" class="help">검색 결과에 적용돼요. 선택한 퀘스트는 전체 이름으로 보여요.</p></div>
         <label for="expansionFilter">확장팩으로 좁히기</label>

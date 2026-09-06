@@ -31,7 +31,6 @@
   --ff-cyan: #85d8ef;
   --ff-gold: #e7c78d;
   --ff-sans: "NanumSquareRound", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-  --ff-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 * { box-sizing: border-box; }
 html { scroll-padding-top: 100px; }
@@ -102,7 +101,7 @@ body .site-header .header-note {
   display: inline-flex;
   width: auto;
   color: var(--ff-muted);
-  font: 12px var(--ff-mono);
+  font: 12px var(--ff-sans);
   letter-spacing: .04em;
 }
 body footer {

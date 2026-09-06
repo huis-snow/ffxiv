@@ -1,14 +1,14 @@
 .hub-main { width: min(1200px, calc(100% - 64px)); margin: 0 auto; min-height: 72vh; padding: 62px 0 20px; }
 .hub-masthead { display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; padding-bottom: 38px; }
-.eyebrow { margin: 0 0 16px; color: var(--ff-gold); font: 12px var(--ff-mono); letter-spacing: .16em; }
+.eyebrow { margin: 0 0 16px; color: var(--ff-gold); font: 12px var(--ff-sans); letter-spacing: .16em; }
 .hub-masthead h1 { margin: 0 0 14px; font-size: clamp(34px, 5vw, 52px); font-weight: 500; letter-spacing: -.06em; line-height: 1.35; }
 .hub-masthead p:last-child { margin: 0; color: var(--ff-muted); }
 .collection-count { flex-shrink: 0; border-left: 1px solid var(--ff-line); padding-left: 24px; color: var(--ff-muted); }
-.collection-count strong { display: block; font: 36px var(--ff-mono); color: var(--ff-text); line-height: 1.1; }
-.collection-count span { display: block; margin-top: 9px; font: 12px var(--ff-mono); letter-spacing: .12em; }
+.collection-count strong { display: block; font: 36px var(--ff-sans); color: var(--ff-text); line-height: 1.1; }
+.collection-count span { display: block; margin-top: 9px; font: 12px var(--ff-sans); letter-spacing: .12em; }
 .collection-heading { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--ff-line); padding: 20px 0; }
 .collection-heading h2 { font-size: 14px; margin: 0; font-weight: 500; }
-.collection-heading > span { color: var(--ff-muted); font: 12px var(--ff-mono); }
+.collection-heading > span { color: var(--ff-muted); font: 12px var(--ff-sans); }
 .tool-list { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
 .tool-link {
   --card-accent: var(--ff-cyan);
@@ -27,8 +27,8 @@
 .tool-link.pvp { --card-accent: var(--ff-gold); background: linear-gradient(145deg, #292a36, #151d2d 70%); }
 .tool-link.duty { --card-accent: #9bddce; background: linear-gradient(145deg, #1d333b, #121e2f 70%); }
 .tool-topline { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 24px; }
-.tool-topline span { color: var(--card-accent); font: 12px var(--ff-mono); letter-spacing: .14em; }
-.tool-topline b { color: #8298b5; font: 28px var(--ff-mono); }
+.tool-topline span { color: var(--card-accent); font: 12px var(--ff-sans); letter-spacing: .14em; }
+.tool-topline b { color: #8298b5; font: 28px var(--ff-sans); }
 .tool-link h3 { margin: 0 0 12px; font-size: clamp(25px, 3vw, 31px); font-weight: 600; letter-spacing: -.045em; }
 .tool-link > p { margin: 0; max-width: 390px; color: var(--ff-muted); font-size: 15px; line-height: 1.9; }
 .tool-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 26px 0 30px; }
