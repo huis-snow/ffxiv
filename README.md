@@ -9,11 +9,13 @@
 - [앱 설명과 데이터 갱신 안내](./msq-tracker/README.md)
 - [시리즈 작전표](https://huis-snow.github.io/ffxiv/pvp-series-calculator/) — PvP 시리즈 목표 경험치·예상 판수·하루 목표 계산 ([앱 안내](./pvp-series-calculator/README.md))
 - [임무 초성 사전](https://huis-snow.github.io/ffxiv/duty-finder/) — 던전·토벌전·레이드 등 공식 임무의 한글·초성 검색 ([앱 안내](./duty-finder/README.md))
+- [뉴비 FAQ](https://huis-snow.github.io/ffxiv/beginner-faq/) — 퀘스트·첫 던전·장비·이동 질문 15개와 답변별 한국 공식 가이드
 
 ## 출처 및 권리 안내
 
 - 퀘스트 이름·레벨·분류·선행 관계: [파이널판타지14 한국 공식 가이드 — 주요 퀘스트](https://guide.ff14.co.kr/lodestone/db/quest)
 - 임무 이름·레벨·분류: [파이널판타지14 한국 공식 가이드 — 임무](https://guide.ff14.co.kr/lodestone/db/duty)
+- FAQ: [한국 공식 초보자 가이드](https://guide.ff14.co.kr/lodestone/playguide/main)를 직접 요약하고 각 답변에 관련 문서 링크를 표시합니다. 개인적인 플레이 팁은 별도로 구분합니다.
 - PvP 경험치·보상 수치: [FFXIV Console Games Wiki — Series Malmstones](https://ffxiv.consolegameswiki.com/wiki/Series_Malmstones)
 - 글꼴: [네이버 나눔스퀘어라운드](https://hangeul.naver.com/font/nanum), [SIL Open Font License 1.1](./fonts/nanum-square-round/OFL.txt)
 
@@ -36,7 +38,8 @@ GitHub Pages의 원본은 `main` 브랜치의 `/ (root)`입니다. 빌드나 패
 ├── sitemap.xml
 ├── msq-tracker/
 ├── pvp-series-calculator/
-└── duty-finder/
+├── duty-finder/
+└── beginner-faq/
 ```
 
 검증: `node --test msq-tracker/tests/progress.test.cjs`
@@ -46,5 +49,7 @@ GitHub Pages의 원본은 `main` 브랜치의 `/ (root)`입니다. 빌드나 패
 임무 초성 사전 검증: `node --test duty-finder/tests/duty-finder.test.cjs`
 
 공통 색상·상단 메뉴·하단 영역은 `theme.css`, 도구 목록은 `hub.css`, 각 앱의 작업 화면은 해당 폴더의 `styles.css`에서 관리합니다.
+
+뉴비 FAQ는 JavaScript 없이 작동하는 정적 HTML입니다. 질문은 `beginner-faq/index.html`에서 관리하며, 내용을 바꿀 때 답변별 공식 출처와 확인일도 점검합니다. 퀘스트 이름은 중첩된 접기 영역에 넣어 기본적으로 숨깁니다.
 
 모든 페이지의 본문·숫자·영문·라벨은 네이버 **나눔스퀘어라운드**를 공통으로 사용합니다. [네이버 공식 배포 페이지](https://hangeul.naver.com/font/nanum)의 Regular·Bold·ExtraBold 웹폰트를 `fonts/nanum-square-round/`에 포함해 직접 제공합니다. 원본 파일은 변경하지 않았으며, [저작권 안내와 SIL Open Font License 1.1](./fonts/nanum-square-round/OFL.txt)을 함께 배포합니다. [네이버 라이선스 안내](https://help.naver.com/support/contents/contents.help?serviceNo=1074&categoryNo=3497).
