@@ -237,10 +237,10 @@ font-weight:600}
 color:#fff}
 .expansion{background:#202940;
 color:var(--ink)}
-.metric>strong{font-family:ui-monospace,monospace;
+.metric>strong{font-family:var(--ff-sans);
 font-size:clamp(26px,3vw,40px);
 font-weight:500;
-letter-spacing:-.07em;
+letter-spacing:normal;
 display:block;
 margin:12px 0 17px;
 line-height:1.2;
@@ -313,8 +313,8 @@ margin-bottom:13px}
 line-height:1.7;
 min-height:50px;
 letter-spacing:-.055em}
-.journey-item .journey-percent{font:22px ui-monospace,monospace;
-letter-spacing:-.07em;
+.journey-item .journey-percent{font:22px var(--ff-sans);
+letter-spacing:normal;
 display:block;
 margin:13px 0 12px;
 overflow-wrap:anywhere}
