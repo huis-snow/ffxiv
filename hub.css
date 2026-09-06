@@ -9,7 +9,7 @@
 .collection-heading { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--ff-line); padding: 20px 0; }
 .collection-heading h2 { font-size: 14px; margin: 0; font-weight: 500; }
 .collection-heading > span { color: var(--ff-muted); font: 12px var(--ff-mono); }
-.tool-list { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.tool-list { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
 .tool-link {
   --card-accent: var(--ff-cyan);
   position: relative;
@@ -25,6 +25,7 @@
 }
 .tool-link:hover { transform: translateY(-4px); border-color: var(--card-accent); }
 .tool-link.pvp { --card-accent: var(--ff-gold); background: linear-gradient(145deg, #292a36, #151d2d 70%); }
+.tool-link.duty { --card-accent: #9bddce; background: linear-gradient(145deg, #1d333b, #121e2f 70%); }
 .tool-topline { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 24px; }
 .tool-topline span { color: var(--card-accent); font: 12px var(--ff-mono); letter-spacing: .14em; }
 .tool-topline b { color: #8298b5; font: 28px var(--ff-mono); }
@@ -34,6 +35,7 @@
 .tool-tags span { padding: 4px 10px; border: 1px solid #33445c; color: #c1cee1; font-size: 12px; }
 .tool-action { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: auto; border-top: 1px solid var(--ff-line); padding: 20px 0; font-size: 14px; }
 .tool-action i { font-style: normal; color: var(--card-accent); font-size: 22px; }
+@media (max-width: 1050px) { .tool-list { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 760px) {
   .hub-main { width: calc(100% - 32px); padding: 34px 0 10px; }
   .hub-masthead { align-items: center; padding-bottom: 30px; }
