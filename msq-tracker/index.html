@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="../theme.css?v=20260906-nanum-round" />
   <script src="data.js?v=20260906" defer></script>
   <script src="progress.js?v=20260906" defer></script>
-  <script src="app.js?v=20260906-ime" defer></script>
+  <script src="app.js?v=20260906-selected-name" defer></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#questSearch">퀘스트 검색으로 바로가기</a>
@@ -40,7 +40,7 @@
         <label for="questSearch">퀘스트 이름</label>
         <div class="search-box"><span aria-hidden="true">⌕</span><input id="questSearch" type="search" autocomplete="off" placeholder="퀘스트 이름의 일부를 입력하세요" aria-describedby="searchHelp" disabled /></div>
         <p id="searchHelp" class="help">띄어쓰기 없이, 초성으로도 찾을 수 있어요.</p>
-        <div class="spoiler-option"><label><input id="hideQuestNames" type="checkbox" checked aria-describedby="spoilerHelp" /><span>퀘스트 이름 초성으로 표시</span></label><p id="spoilerHelp" class="help">검색 결과와 선택한 퀘스트에 적용돼요.</p></div>
+        <div class="spoiler-option"><label><input id="hideQuestNames" type="checkbox" checked aria-describedby="spoilerHelp" /><span>퀘스트 이름 초성으로 표시</span></label><p id="spoilerHelp" class="help">검색 결과에 적용돼요. 선택한 퀘스트는 전체 이름으로 보여요.</p></div>
         <label for="expansionFilter">확장팩으로 좁히기</label>
         <select id="expansionFilter" disabled><option value="">모든 확장팩</option></select>
         <div class="results-heading"><span id="searchSummary" role="status">공식 가이드 데이터를 불러오는 중…</span></div>

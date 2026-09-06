@@ -73,7 +73,7 @@
     const q=result.selected;
     $('emptyState').hidden=true;$('selectedState').hidden=false;
     $('selectedMeta').textContent=questCategory(q)+($('hideQuestNames').checked?'':` · ${q.region}`);
-    $('selectedName').textContent=questTitle(q);
+    $('selectedName').textContent=`Lv.${q.level} · ${q.name}`;
     $('questLink').href=`https://guide.ff14.co.kr/lodestone/db/quest/${q.id}`;
     $('completionNote').textContent=status==='completed'?'선택한 퀘스트까지 완료 개수에 포함해요.':'선택한 퀘스트는 아직 완료 개수에 포함하지 않아요.';
     $('expansionName').textContent=data.expansions.find(e=>e.id===q.expansion).name;
